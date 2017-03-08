@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.lyy2016.ball.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:text="篮球计时器"
+            android:textSize="18dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/a"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="信电院队"
+                android:fontFamily="s" />
+
+            <TextView
+                android:id="@+id/text_view_team_a"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:textSize="56sp"
+                android:gravity="center"
+                android:text="0" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_selector"
+                android:onClick="addThreeForTeamA"
+                android:text="+3 分"
+                android:textColor="@color/white" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_selector"
+                android:onClick="addTwoForTeamA"
+                android:textColor="@color/white"
+                android:text="+2 分"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:onClick="addOneForTeamA"
+                android:background="@drawable/btn_selector"
+                android:text="+1 分（罚 球 ）"
+                android:textColor="@color/white"
+                android:id="@+id/button2" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="10dp"
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/b"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="外院队"
+                android:fontFamily="s" />
+
+            <TextView
+                android:id="@+id/text_view_team_b"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:textSize="56sp"
+                android:gravity="center"
+                android:text="0" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_selector"
+                android:onClick="addThreeForTeamB"
+                android:text="+3 分"
+                android:textColor="@color/white" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/btn_selector"
+                android:onClick="addTwoForTeamB"
+                android:textColor="@color/white"
+                android:text="+2 分"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:onClick="addOneForTeamB"
+                android:background="@drawable/btn_selector"
+                android:text="+1 分（罚 球 ）"
+                android:textColor="@color/white"
+                android:id="@+id/button" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:focusableInTouchMode="true">
+            <EditText
+                android:id="@+id/mi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:layout_margin="5dp"
+                android:hint="信电院队"
+                android:gravity="center"
+                android:maxLength="5"
+                android:imeOptions="actionDone"
+                android:singleLine="true"/>
+
+            <EditText
+                android:layout_margin="5dp"
+                android:id="@+id/qi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:maxLength="5"
+                android:hint="其他队"
+                android:imeOptions="actionDone"
+                android:singleLine="true"/>
+
+            <TextView
+                android:onClick="submit"
+                android:layout_margin="5dp"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="提交"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:focusable="true"
+            android:gravity="center"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:id="@+id/s"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:maxLength="2"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="分钟"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:id="@+id/textView5" />
+            <EditText
+                android:layout_margin="5dp"
+                android:id="@+id/m"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:maxLength="2"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:singleLine="true"/>
+            <TextView
+                android:layout_margin="5dp"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="秒"/>
+    </LinearLayout>
+
+        <TextView
+            android:text="Let's Run!"
+            android:id="@+id/tv_time"
+            android:textColor="@color/colorAccent"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textSize="22dp">
+            </TextView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center">
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:onClick="fin"
+                android:text="返回"
+                android:textSize="16dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_selector"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true" />
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="开始"
+                android:textSize="16dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_selector"
+                android:paddingLeft="20dp"
+                android:layout_marginRight="10dp"
+                ></Button>
+
+            <Button android:id="@+id/pause"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="暂停"
+                android:background="@drawable/btn_selector"
+                android:textSize="16dp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                ></Button>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="重置"
+                android:onClick="update"
+                android:textSize="16dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_selector"
+                android:paddingLeft="20dp"
+                android:visibility="visible"
+                android:id="@+id/btn_stop"></Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

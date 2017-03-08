@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.lyy2016.ball">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/DBTheme">
+        <activity android:name="MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".Count" android:screenOrientation="portrait"></activity>
+        <activity android:name=".AllActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".About" android:screenOrientation="portrait"></activity>
+        <activity android:name=".EditActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".AddActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".SearchActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".MainImageActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".appupdate.SplashActivity" android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

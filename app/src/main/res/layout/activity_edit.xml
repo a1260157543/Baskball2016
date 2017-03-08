@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.lyy2016.ball.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:text="修改球员信息"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="球号:"/>
+        <EditText
+            android:id="@+id/et_main_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="2"
+            android:enabled="false"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:singleLine="true"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_marginLeft="10dp"
+            android:text="球员:"/>
+        <EditText
+            android:id="@+id/et_main_province"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="3"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="得分:"
+            android:id="@+id/textView2" />
+
+        <EditText
+            android:id="@+id/et_main_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="3"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_marginLeft="10dp"
+            android:text="篮板:"/>
+        <EditText
+            android:id="@+id/et_main_district"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="3"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="true">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="助攻:" />
+        <EditText
+            android:id="@+id/et_main_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="3"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_marginLeft="10dp"
+            android:text="抢断:"/>
+        <EditText
+            android:id="@+id/et_main_qd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="3"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="true">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="盖帽:" />
+        <EditText
+            android:id="@+id/et_main_gm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="3"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_marginLeft="10dp"
+            android:text="投篮:" />
+
+        <EditText
+            android:id="@+id/et_main_tl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="8"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:digits="1234567890/%"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="true">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="三分:" />
+        <EditText
+            android:id="@+id/et_main_sf"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="8"
+            android:inputType="number"
+            android:digits="1234567890/%"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_marginLeft="10dp"
+            android:text="罚球:" />
+        <EditText
+            android:id="@+id/et_main_fq"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="8"
+            android:inputType="number"
+            android:digits="1234567890/%()"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="true">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="失误:" />
+        <EditText
+            android:id="@+id/et_main_sw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="3"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:layout_marginLeft="10dp"
+            android:text="犯规:" />
+        <EditText
+            android:id="@+id/et_main_fg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:maxLength="3"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5">
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="5dp"
+            android:text="说明:（命中率）投篮 三分 罚球 \n可输入除数字外的（/%()）符号！"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_main_insert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="新增"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_main_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="删除"/>
+
+        <Button
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="修改"/>
+
+        <Button
+            android:id="@+id/btn_main_select"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="查询"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:weightSum="5"
+        android:visibility="gone">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="重置数据库表"/>
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_main_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textSize="14sp"
+        />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="球号"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="球员"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="得分"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="篮板"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="助攻"/>
+        <TextView
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="抢断"/>
+        <TextView
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="盖帽"/>
+
+        <Button
+            android:visibility="invisible"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:visibility="gone">
+        <ListView
+            android:layout_marginTop="5dp"
+            android:id="@+id/lv_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/about"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="关于"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/btn_main_reset"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="重置信息"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_sx"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="全部信息"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv_js"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="计时"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:gravity="center" />
+            <TextView
+            android:onClick="fin"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="返回"
+            android:background="@drawable/btn_selector"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/btn_main_update"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="确定修改"
+                android:background="@drawable/btn_selector"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:gravity="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
